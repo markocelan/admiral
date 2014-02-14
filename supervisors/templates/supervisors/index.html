@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "supervisors/style.css"%}" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "supervisors/font-awesome.min.css"%}" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+{% if statuses %}
+    <ul class="status-list">
+    {% for status in statuses %}
+        <li class="{{ status.state }}"><a href="/supervisors/inst/{{ status.inst }}/"></a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No servers are available.</p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supervisor @ {{ inst }}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "supervisors/style.css"%}" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "supervisors/font-awesome.min.css"%}" />
+</head>
+<body>
+    <h1>{{ inst }}</h1>
+    <hr />
+    <ul class="instance-list">
+    {% for app in  status %}
+       <li  class="{{ app.statename }}"> {{ app.group }}:{{ app.name }} {{ app.statename }}
+       [
+         <a class="fa fa-play" href="action/start/{{ app.group }}:{{ app.name }}/"></a>
+         <a class="fa fa-stop" href="action/stop/{{ app.group }}:{{ app.name }}/"></a>
+         <a class="fa fa-refresh" href="action/restart/{{ app.group }}:{{ app.name }}/"></a>
+           ]
+       </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

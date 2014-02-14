@@ -1,0 +1,17 @@
+body {font-family: 'Open Sans', sans-serif;background:#ecf0f1;}
+
+.status-list {list-style:none;}
+.status-list li {display:inline-block;margin:0 0 10px 10px;}
+.status-list li a {display:block;width:15px;height:30px;text-indent:-99999em;}
+
+.status-list .RUNNING {background:#27ae60;}
+.status-list .STOPPED {background:#3498db;}
+.status-list .FATAL {background:#e74c3c;}
+
+.instance-list {list-style:none;}
+.instance-list li {margin:0 0 5px 0;padding:3px;}
+.instance-list li a {color:#2c3e50;display:inline-block;margin:0 0 0 5px;font-size:15px;text-decoration:none;}
+
+.instance-list .RUNNING {background:#2ecc71;float:none;}
+.instance-list .STOPPED {background:#3498db;float:none;}
+.instance-list .FATAL {background:#e74c3c;float:none;}
