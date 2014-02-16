@@ -6,6 +6,7 @@ body {font-family: 'Open Sans', sans-serif;background:#ecf0f1;}
 
 .status-list .RUNNING {background:#27ae60;}
 .status-list .STOPPED {background:#3498db;}
+.status-list .BACKOFF {background:#e67e22;}
 .status-list .FATAL {background:#e74c3c;}
 
 .instance-list {list-style:none;}
@@ -14,4 +15,5 @@ body {font-family: 'Open Sans', sans-serif;background:#ecf0f1;}
 
 .instance-list .RUNNING {background:#2ecc71;float:none;}
 .instance-list .STOPPED {background:#3498db;float:none;}
+.instance-list .BACKOFF {background:#e67e22;float:none;}
 .instance-list .FATAL {background:#e74c3c;float:none;}
